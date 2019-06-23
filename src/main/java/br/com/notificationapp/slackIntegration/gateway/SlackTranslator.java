@@ -16,6 +16,11 @@ public class SlackTranslator {
     public SlackMessage translateToSlackMessage(String formatedMessage, Message messageToConvert){
         SlackMessage slackMessage = new SlackMessage();
         SlackAttachments slackAttachments = new SlackAttachments();
+        messageToConvert.getConditionToSuccess()
+                .forEach(conditionToSuccess -> messageToConvert.getFieldToFindList()
+                        .forEach(fieldToFind -> {
+                            if (true){}
+                        }));
         return slackMessage;
     }
 }

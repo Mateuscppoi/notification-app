@@ -40,5 +40,5 @@ services:
       - /bin/bash
       - -c
     command:
-      - /scenario/test.sh
+      - /scenario/TestDay1.sh
 

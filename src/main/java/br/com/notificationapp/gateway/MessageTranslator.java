@@ -56,7 +56,7 @@ public class MessageTranslator {
         message.setMessage(findPattern(MESSAGE_FIELDS_REGEX, messageToCreate, 1));
         message.setNickName(findPattern(NICKNAME_FIELDS_REGEX, messageToCreate, 1));
         message.setFieldToFindList(toFindList);
-        message.setConditionToSuccesse(conditionsToSuccess);
+        message.setConditionToSuccess(conditionsToSuccess);
         message.setOrigin(findPattern(ORIGIN_FIELDS_REGEX, messageToCreate, 1));
         message.setCreationDate(LocalDateTime.now());
         return message;

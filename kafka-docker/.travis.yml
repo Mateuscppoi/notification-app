@@ -41,13 +41,13 @@ install:
   - docker pull confluentinc/cp-kafkacat
 
 before_script:
-  - docker-compose -f test/docker-compose.yml up -d zookeeper
-  - docker-compose -f test/docker-compose.yml scale kafka=2
+  - docker-compose -f TestDay1/docker-compose.yml up -d zookeeper
+  - docker-compose -f TestDay1/docker-compose.yml scale kafka=2
 
 script:
   # Shellcheck main source files
   - shellcheck -s bash broker-list.sh create-topics.sh start-kafka.sh download-kafka.sh versions.sh
-  - cd test
+  - cd TestDay1
   # Shellcheck the tests
   - shellcheck -x -e SC1090 -s bash *.sh **/*.sh
   - ./verifyImageLabels.sh # Verify docker image's label

@@ -51,7 +51,8 @@ public class WebhookApi {
         Message messageFromOrigin = messageTranslator.getMessageFromOrigin(origin);
 
         jsonTranslator.getDataFromNode(jsonNode, messageFromOrigin.getFieldToFindList());
-        return webhookService.convertValuesToMessage(messageFromOrigin);
+//        return webhookService.convertValuesToMessage(messageFromOrigin);
+        return "sasa";
     }
 
     @PostMapping("/realDeal/{origin}")
@@ -61,10 +62,10 @@ public class WebhookApi {
         Message messageFromOrigin = messageTranslator.getMessageFromOrigin(origin);
 
         jsonTranslator.getDataFromNode(jsonNode, messageFromOrigin.getFieldToFindList());
-        String message = webhookService.convertValuesToMessage(messageFromOrigin);
+//        String message = webhookService.convertValuesToMessage(messageFromOrigin);
         log.info("Enviando notificação para o slack");
-        System.out.println(message);
-        return message;
+        System.out.println("");
+        return "";
     }
 
     @GetMapping("/slack")
